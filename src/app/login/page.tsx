@@ -4,30 +4,24 @@ export default function LoginPage() {
       <div className="panel">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
-            <div className="title">Secure Login</div>
-            <div className="subtitle">Role-based access for MSA Dashboard</div>
+            <div className="title">Doğrudan Erişim</div>
+            <div className="subtitle">Kimlik doğrulama kaldırıldı — panolara direkt geçiş yapın</div>
           </div>
           <div style={{ display: "flex", gap: 8 }}>
-            <span className="chip">Security: AES-256</span>
-            <span className="chip">Protocol: OAuth2</span>
+            <span className="chip">Durum: Açık Erişim</span>
+            <span className="chip">Güvenlik: Demo</span>
           </div>
         </div>
       </div>
+      
       <div className="panel">
-        <h2>Kimlik Doğrulama</h2>
-        <p className="muted">Komutan, Sağlık Görevlisi ve Analist rollerini statik olarak seçebilirsiniz.</p>
-        <div style={{ display: "grid", gap: 10, maxWidth: 420 }}>
-          <input placeholder="Kullanıcı adı" style={{ padding: 10, borderRadius: 8, border: "1px solid var(--border)", background: "#0b1220", color: "#e5e9f2" }} />
-          <input type="password" placeholder="Parola" style={{ padding: 10, borderRadius: 8, border: "1px solid var(--border)", background: "#0b1220", color: "#e5e9f2" }} />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
-            <button className="btn">Commander</button>
-            <button className="btn">Health Officer</button>
-            <button className="btn">Analyst</button>
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <button className="btn btn-primary">Giriş</button>
-            <button className="btn">Temizle</button>
-          </div>
+        <h2>Hızlı Giriş</h2>
+        <p className="muted">Demo amaçlı roller için doğrudan panolara geçiş yapın.</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10 }}>
+          <a className="btn btn-primary" href="/commander">Komutan olarak giriş</a>
+          <a className="btn btn-primary" href="/analyst">Analist olarak giriş</a>
+          <a className="btn btn-primary" href="/health">Sağlık Görevlisi olarak giriş</a>
+          <a className="btn" href="/">Misafir olarak devam et</a>
         </div>
       </div>
     </section>

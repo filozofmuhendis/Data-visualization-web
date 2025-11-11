@@ -19,18 +19,13 @@ export default function CommanderDashboard() {
       <div className="panel">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
-            <div className="title">Commander Dashboard</div>
-            <div className="subtitle">Welcome, Commander</div>
+            <div className="title">Komutan Panosu</div>
+            <div className="subtitle">Hoş geldiniz, Komutan</div>
           </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <span className="chip chip-risk-low">System: OPERATIONAL</span>
-            <span className="chip">Units: 12/12</span>
-            <span className="chip">Alerts: 2</span>
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <button className="btn btn-primary">Refresh</button>
-            <button className="btn">Settings</button>
-            <button className="btn btn-danger">Logout</button>
+            <span className="chip chip-risk-low">Sistem: OPERASYONEL</span>
+            <span className="chip">Birimler: 12/12</span>
+            <span className="chip">Uyarılar: 2</span>
           </div>
         </div>
       </div>
@@ -40,25 +35,25 @@ export default function CommanderDashboard() {
         {/* Left: Tactical Map + Mission */}
         <div className="stack">
           <div className="panel">
-            <h2>Tactical Map</h2>
-            <p className="muted">Katmanlar: Units, Threats, Missions, Weather</p>
+            <h2>Taktik Harita</h2>
+            <p className="muted">Katmanlar: Birimler, Tehditler, Görevler, Hava Durumu</p>
             <TacticalMap units={units} height={360} speedMs={700} />
             <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
-              <button className="btn">Refresh Map</button>
-              <button className="btn">Toggle Threats</button>
-              <label className="chip">Heatmap: ON</label>
-              <label className="chip">Routes: ON</label>
-              <label className="chip">Zones: ON</label>
+              <button className="btn">Haritayı Yenile</button>
+              <button className="btn">Tehditleri Aç/Kapat</button>
+              <label className="chip">Isı Haritası: AÇIK</label>
+              <label className="chip">Rotalar: AÇIK</label>
+              <label className="chip">Bölgeler: AÇIK</label>
             </div>
           </div>
           <div className="panel">
-            <h2>Current Mission Status</h2>
+            <h2>Mevcut Görev Durumu</h2>
             <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: 8 }}>
-              <span>Mission:</span>
-              <strong>Operation Sentinel</strong>
-              <span>Phase:</span>
-              <strong>Advance</strong>
-              <span>Progress:</span>
+              <span>Görev:</span>
+              <strong>Operasyon Sentinel</strong>
+              <span>Aşama:</span>
+              <strong>İlerleme</strong>
+              <span>İlerleme:</span>
               <div className="bar"><div className="bar-fill" style={{ width: "48%" }} /></div>
             </div>
           </div>
@@ -67,51 +62,51 @@ export default function CommanderDashboard() {
         {/* Right: Tabs (Units, Health, Logistics, Alerts) */}
         <div className="stack">
           <div className="panel">
-            <h2>Units</h2>
+            <h2>Birimler</h2>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Unit ID</th>
-                  <th>Type</th>
-                  <th>Position</th>
-                  <th>Status</th>
-                  <th>Last Seen</th>
+                  <th>Birim ID</th>
+                  <th>Tür</th>
+                  <th>Konum</th>
+                  <th>Durum</th>
+                  <th>Son Görülme</th>
                   <th>Risk</th>
-                  <th>Actions</th>
+                  <th>İşlemler</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>U-013</td>
-                  <td>Armor</td>
+                  <td>Zırhlı</td>
                   <td>41.012, 28.975</td>
-                  <td><span className="chip">Operational</span></td>
-                  <td>2m ago</td>
-                  <td><span className="chip chip-risk-moderate">Moderate</span></td>
-                  <td><button className="btn btn-primary">Select</button></td>
+                  <td><span className="chip">Operasyonel</span></td>
+                  <td>2dk önce</td>
+                  <td><span className="chip chip-risk-moderate">Orta</span></td>
+                  <td><button className="btn btn-primary">Seç</button></td>
                 </tr>
                 <tr>
                   <td>U-021</td>
-                  <td>Infantry</td>
+                  <td>Piyade</td>
                   <td>41.014, 28.978</td>
-                  <td><span className="chip">Active</span></td>
-                  <td>1m ago</td>
-                  <td><span className="chip chip-risk-low">Low</span></td>
-                  <td><button className="btn">Details</button></td>
+                  <td><span className="chip">Aktif</span></td>
+                  <td>1dk önce</td>
+                  <td><span className="chip chip-risk-low">Düşük</span></td>
+                  <td><button className="btn">Detaylar</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div className="panel">
-            <h2>Health</h2>
+            <h2>Sağlık</h2>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Unit ID</th>
-                  <th>HR</th>
+                  <th>Birim ID</th>
+                  <th>Nabız</th>
                   <th>SpO2</th>
-                  <th>Status</th>
+                  <th>Durum</th>
                 </tr>
               </thead>
               <tbody>
@@ -125,21 +120,21 @@ export default function CommanderDashboard() {
                   <td>U-021</td>
                   <td>101</td>
                   <td>93%</td>
-                  <td><span className="chip chip-risk-moderate">Warning</span></td>
+                  <td><span className="chip chip-risk-moderate">Uyarı</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div className="panel">
-            <h2>Logistics</h2>
+            <h2>Lojistik</h2>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Unit ID</th>
-                  <th>Fuel</th>
-                  <th>Ammo</th>
-                  <th>Resupply ETA</th>
+                  <th>Birim ID</th>
+                  <th>Yakıt</th>
+                  <th>Mühimmat</th>
+                  <th>İkmal ETA</th>
                 </tr>
               </thead>
               <tbody>
@@ -160,14 +155,14 @@ export default function CommanderDashboard() {
           </div>
 
           <div className="panel">
-            <h2>Alerts</h2>
+            <h2>Uyarılar</h2>
             <ul>
-              <li><span className="chip chip-risk-high">CRITICAL</span> — Enemy movement detected near Sector 7B</li>
+              <li><span className="chip chip-risk-high">KRİTİK</span> — Sektör 7B yakınında düşman hareketi tespit edildi</li>
               <li><span className="chip chip-risk-moderate">WARNING</span> — Weather degradation expected in 30 minutes</li>
             </ul>
             <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
-              <button className="btn btn-success">Acknowledge Selected</button>
-              <button className="btn btn-warning">Create Alert</button>
+              <button className="btn btn-success">Seçileni Onayla</button>
+              <button className="btn btn-warning">Uyarı Oluştur</button>
             </div>
           </div>
         </div>

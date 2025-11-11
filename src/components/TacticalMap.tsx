@@ -10,7 +10,7 @@ export type Unit = {
   side: UnitSide;
   path: Point[];
 };
-
+ 
 type Props = {
   units: Unit[];
   height?: number; // px
@@ -87,8 +87,8 @@ export default function TacticalMap({ units, height = 300, showGrid = true, spee
 
       {/* Controls */}
       <div style={{ position: "absolute", left: 8, bottom: 8, display: "flex", gap: 8 }}>
-        <button className="btn" onClick={() => setRunning((r) => !r)}>{running ? "Pause" : "Play"}</button>
-        <label className="chip">Units: {units.length}</label>
+        <button className="btn" onClick={() => setRunning((r) => !r)}>{running ? "Duraklat" : "Başlat"}</button>
+        <label className="chip">Birimler: {units.length}</label>
       </div>
     </div>
   );

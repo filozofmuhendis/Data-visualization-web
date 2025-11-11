@@ -75,6 +75,8 @@ p { color: var(--muted); }
 /* Layout helpers */
 .grid-2 { display: grid; grid-template-columns: 2fr 1.5fr; gap: 12px; }
 .grid-2-balanced { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3-balanced { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.mt-2 { margin-top: 12px; }
 .table { width: 100%; border-collapse: collapse; }
 .table th, .table td { padding: 10px; border-bottom: 1px solid var(--border); }
 .table th { text-align: left; color: var(--muted); font-weight: 600; }
@@ -86,3 +88,10 @@ p { color: var(--muted); }
 /* Header titles */
 .title { font-size: 20px; font-weight: 600; }
 .subtitle { color: var(--muted); font-size: 14px; }
+
+/* TopBar */
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #0e152e 0%, #0c1328 100%); }
+.breadcrumb { color: var(--muted); font-size: 12px; }
+.topbar-actions { display: flex; gap: 8px; align-items: center; }
+.input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: #0b1220; color: var(--text); min-width: 200px; }
+.input::placeholder { color: #6b7280; }

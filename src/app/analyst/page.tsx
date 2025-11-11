@@ -8,20 +8,14 @@ export default function AnalystDashboard() {
       <div className="panel">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div>
-            <div className="title">Intelligence & Analysis Dashboard</div>
-            <div className="subtitle">Intelligence Analyst</div>
+            <div className="title">İstihbarat ve Analiz Panosu</div>
+            <div className="subtitle">İstihbarat Analisti</div>
           </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <span className="chip">Data Points: 4,213</span>
-            <span className="chip">Threats: 12</span>
-            <span className="chip">Patterns: 5</span>
-            <span className="chip">Confidence: 71%</span>
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <button className="btn btn-primary">Run Analysis</button>
-            <button className="btn">Export Data</button>
-            <button className="btn">Refresh</button>
-            <button className="btn btn-danger">Logout</button>
+            <span className="chip">Veri Noktaları: 4.213</span>
+            <span className="chip">Tehditler: 12</span>
+            <span className="chip">Kalıplar: 5</span>
+            <span className="chip">Güven: %71</span>
           </div>
         </div>
       </div>
@@ -29,70 +23,70 @@ export default function AnalystDashboard() {
       {/* Analysis Parameters & Results */}
       <div className="grid-2-balanced">
         <div className="panel">
-          <h2>Analysis Parameters</h2>
+          <h2>Analiz Parametreleri</h2>
           <div style={{ display: "grid", gridTemplateColumns: "150px 1fr", gap: 8 }}>
-            <span>Time Range:</span>
-            <label className="chip">Last 24 Hours</label>
-            <span>Data Sources:</span>
+            <span>Zaman Aralığı:</span>
+            <label className="chip">Son 24 Saat</label>
+            <span>Veri Kaynakları:</span>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <label className="chip">Unit Positions</label>
-              <label className="chip">Health Data</label>
-              <label className="chip">Logistics Data</label>
-              <label className="chip">Weather Data</label>
+              <label className="chip">Birim Konumları</label>
+              <label className="chip">Sağlık Verisi</label>
+              <label className="chip">Lojistik Verisi</label>
+              <label className="chip">Hava Durumu Verisi</label>
             </div>
-            <span>Analysis Type:</span>
-            <label className="chip">Pattern Recognition</label>
+            <span>Analiz Türü:</span>
+            <label className="chip">Desen Tanıma</label>
           </div>
         </div>
         <div className="panel">
-          <h2>Analysis Results</h2>
+          <h2>Analiz Sonuçları</h2>
           <table className="table">
             <thead>
               <tr>
-                <th>Finding</th>
-                <th>Type</th>
-                <th>Confidence</th>
-                <th>Impact</th>
-                <th>Timestamp</th>
+                <th>Bulgular</th>
+                <th>Tür</th>
+                <th>Güven</th>
+                <th>Etkisi</th>
+                <th>Zaman</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Route anomaly detected on Sector 7</td>
-                <td>Anomaly</td>
+                <td>Sektör 7'de rota anomali tespit edildi</td>
+                <td>Anomali</td>
                 <td>0.81</td>
-                <td><span className="chip chip-risk-moderate">Medium</span></td>
+                <td><span className="chip chip-risk-moderate">Orta</span></td>
                 <td>12:04</td>
               </tr>
               <tr>
-                <td>Weather-Logistics correlation observed</td>
-                <td>Correlation</td>
+                <td>Hava-Lojistik korelasyonu gözlemlendi</td>
+                <td>Korelasyon</td>
                 <td>0.67</td>
-                <td><span className="chip">Low</span></td>
+                <td><span className="chip">Düşük</span></td>
                 <td>11:48</td>
               </tr>
             </tbody>
           </table>
-          <p className="muted" style={{ marginTop: 8 }}>Summary: Weather degradation correlates with slower resupply on eastern route.</p>
+          <p className="muted" style={{ marginTop: 8 }}>Özet: Hava koşullarındaki bozulma, doğu güzergahında daha yavaş ikmalle ilişkilidir.</p>
         </div>
       </div>
 
       {/* Intelligence Monitoring */}
       <div className="grid-2-balanced">
         <div className="panel">
-          <h2>Threat Assessment</h2>
+          <h2>Tehdit Değerlendirmesi</h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             <div className="panel-2">
-              <div className="chip chip-risk-moderate" style={{ marginBottom: 8, display: "inline-block" }}>OVERALL: MODERATE</div>
-              <div> Kinetic Threats</div>
+              <div className="chip chip-risk-moderate" style={{ marginBottom: 8, display: "inline-block" }}>GENEL: ORTA</div>
+              <div> Kinetik Tehditler</div>
               <div className="bar"><div className="bar-fill" style={{ width: "30%" }} /></div>
-              <div style={{ marginTop: 8 }}> Cyber Threats</div>
+              <div style={{ marginTop: 8 }}> Siber Tehditler</div>
               <div className="bar"><div className="bar-fill" style={{ width: "15%" }} /></div>
-              <div style={{ marginTop: 8 }}> Environmental</div>
+              <div style={{ marginTop: 8 }}> Çevresel</div>
               <div className="bar"><div className="bar-fill" style={{ width: "45%" }} /></div>
             </div>
             <div className="panel-2">
-              <div className="title" style={{ fontSize: 16, marginBottom: 8 }}>AOI: Sector 7B</div>
+              <div className="title" style={{ fontSize: 16, marginBottom: 8 }}>İlgi Alanı: Sektör 7B</div>
               {(() => {
                 const units: Unit[] = [
                   { id: "U-021", name: "Infantry-2", side: "friendly", path: [
@@ -111,11 +105,11 @@ export default function AnalystDashboard() {
           </div>
         </div>
         <div className="panel">
-          <h2>Event History</h2>
+          <h2>Olay Geçmişi</h2>
           <ul>
-            <li>12:01 — Sensor 3: Anomaly</li>
-            <li>12:09 — Operator approval</li>
-            <li>12:15 — Mission update</li>
+            <li>12:01 — Sensör 3: Anomali</li>
+            <li>12:09 — Operatör onayı</li>
+            <li>12:15 — Görev güncellemesi</li>
           </ul>
         </div>
       </div>
