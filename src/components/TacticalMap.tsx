@@ -2,9 +2,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-type Point = { x: number; y: number };
-type UnitSide = "friendly" | "enemy" | "neutral";
-type Unit = {
+export type Point = { x: number; y: number };
+export type UnitSide = "friendly" | "enemy" | "neutral";
+export type Unit = {
   id: string;
   name: string;
   side: UnitSide;

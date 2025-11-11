@@ -1,7 +1,8 @@
 import TacticalMap from "../../components/TacticalMap";
+import type { Unit } from "../../components/TacticalMap";
 
 export default function CommanderDashboard() {
-  const units = [
+  const units: Unit[] = [
     { id: "U-013", name: "Armor-1", side: "friendly", path: [
       { x: 10, y: 80 }, { x: 20, y: 72 }, { x: 32, y: 66 }, { x: 44, y: 58 }, { x: 56, y: 52 }
     ] },

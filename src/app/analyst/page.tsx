@@ -1,4 +1,5 @@
 import TacticalMap from "../../components/TacticalMap";
+import type { Unit } from "../../components/TacticalMap";
 
 export default function AnalystDashboard() {
   return (
@@ -93,7 +94,7 @@ export default function AnalystDashboard() {
             <div className="panel-2">
               <div className="title" style={{ fontSize: 16, marginBottom: 8 }}>AOI: Sector 7B</div>
               {(() => {
-                const units = [
+                const units: Unit[] = [
                   { id: "U-021", name: "Infantry-2", side: "friendly", path: [
                     { x: 20, y: 75 }, { x: 30, y: 70 }, { x: 42, y: 66 }
                   ] },
@@ -104,7 +105,7 @@ export default function AnalystDashboard() {
                     { x: 78, y: 30 }, { x: 72, y: 36 }, { x: 66, y: 40 }
                   ] },
                 ];
-                return <TacticalMap units={units as any} height={200} speedMs={900} />;
+                return <TacticalMap units={units} height={200} speedMs={900} />;
               })()}
             </div>
           </div>
