@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LoginPage() {
   return (
     <section className="stack">
@@ -18,10 +20,10 @@ export default function LoginPage() {
         <h2>Hızlı Giriş</h2>
         <p className="muted">Demo amaçlı roller için doğrudan panolara geçiş yapın.</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 10 }}>
-          <a className="btn btn-primary" href="/commander">Komutan olarak giriş</a>
-          <a className="btn btn-primary" href="/analyst">Analist olarak giriş</a>
-          <a className="btn btn-primary" href="/health">Sağlık Görevlisi olarak giriş</a>
-          <a className="btn" href="/">Misafir olarak devam et</a>
+          <Link className="btn btn-primary" href="/commander">Komutan olarak giriş</Link>
+          <Link className="btn btn-primary" href="/analyst">Analist olarak giriş</Link>
+          <Link className="btn btn-primary" href="/health">Sağlık Görevlisi olarak giriş</Link>
+          <Link className="btn" href="/">Misafir olarak devam et</Link>
         </div>
       </div>
     </section>

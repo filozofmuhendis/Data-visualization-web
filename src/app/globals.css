@@ -8,6 +8,13 @@
   --muted: #94a3b8;
   --accent: #33c3ff;        /* ops blue */
 
+  /* Theming for controls */
+  --panel-header-bg: #0f1730;
+  --control-separator: #2c3650;
+  --chip-bg: #0b1225;
+  --chip-fg: var(--muted);
+  --input-bg: #0b1220;
+
   /* Buttons */
   --primary: #2563eb;       /* command blue */
   --success: #16a34a;
@@ -57,6 +64,10 @@ p { color: var(--muted); }
 .panel h2 { margin: 0 0 8px; font-size: 18px; }
 .muted { color: var(--muted); font-size: 14px; }
 
+/* Panel header (map controls) */
+.panel-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; border-bottom: 1px solid var(--control-separator); padding: 6px 8px; border-radius: 8px; background: var(--panel-header-bg); }
+.panel-header strong { font-size: 12px; color: #c9d7f2; }
+
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: #0d152b; color: var(--text); cursor: pointer; }
 .btn:hover { border-color: #27406e; }
@@ -66,7 +77,7 @@ p { color: var(--muted); }
 .btn-warning { background: var(--warning); border-color: var(--warning); color: #0a0a0a; }
 
 /* Chips */
-.chip { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); color: var(--muted); background: #0b1225; }
+.chip { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border); color: var(--chip-fg); background: var(--chip-bg); }
 .chip-risk-low { color: white; background: rgba(22,163,74,0.15); border-color: rgba(22,163,74,0.5); }
 .chip-risk-moderate { color: #1b1b1b; background: rgba(245,158,11,0.25); border-color: rgba(245,158,11,0.6); }
 .chip-risk-high { color: white; background: rgba(239,68,68,0.2); border-color: rgba(239,68,68,0.5); }
@@ -93,5 +104,5 @@ p { color: var(--muted); }
 .topbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; border-bottom: 1px solid var(--border); background: linear-gradient(180deg, #0e152e 0%, #0c1328 100%); }
 .breadcrumb { color: var(--muted); font-size: 12px; }
 .topbar-actions { display: flex; gap: 8px; align-items: center; }
-.input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: #0b1220; color: var(--text); min-width: 200px; }
+.input { padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--input-bg); color: var(--text); min-width: 200px; }
 .input::placeholder { color: #6b7280; }

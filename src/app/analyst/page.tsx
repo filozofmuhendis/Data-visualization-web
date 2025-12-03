@@ -1,5 +1,5 @@
-import TacticalMap from "../../components/TacticalMap";
-import type { Unit } from "../../components/TacticalMap";
+import TacticalMap from "@/components/TacticalMap";
+import type { Unit } from "@/components/TacticalMap";
 
 export default function AnalystDashboard() {
   return (

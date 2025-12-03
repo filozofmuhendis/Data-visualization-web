@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "../components/TopBar";
+import AlertBar from "@/components/AlertBar";
 
 export const metadata: Metadata = {
   title: "MSA Gösterge Paneli",
@@ -12,7 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="tr">
       <body>
         <TopBar />
-        <main className="container">{children}</main>
+        <AlertBar />
+        <main id="main-content" className="container">{children}</main>
       </body>
     </html>
   );

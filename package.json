@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mgrs": "^2.1.0",
     "next": "^14.2.0",
+    "proj4": "^2.20.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "utm-latlng": "^1.0.8"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

@@ -1,5 +1,5 @@
-import TacticalMap from "../../components/TacticalMap";
-import type { Unit } from "../../components/TacticalMap";
+import TacticalMap from "@/components/TacticalMap";
+import type { Unit } from "@/components/TacticalMap";
 
 export default function CommanderDashboard() {
   const units: Unit[] = [
@@ -37,7 +37,7 @@ export default function CommanderDashboard() {
           <div className="panel">
             <h2>Taktik Harita</h2>
             <p className="muted">Katmanlar: Birimler, Tehditler, Görevler, Hava Durumu</p>
-            <TacticalMap units={units} height={360} speedMs={700} />
+            <TacticalMap units={units} height={360} speedMs={700} showControls />
             <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
               <button className="btn">Haritayı Yenile</button>
               <button className="btn">Tehditleri Aç/Kapat</button>

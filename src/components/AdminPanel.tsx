@@ -1,4 +1,4 @@
-import TacticalMap, { Unit } from "./TacticalMap";
+import TacticalMap, { Unit } from "@/components/TacticalMap";
 
 export default function AdminPanel() {
   const commanderUnits: Unit[] = [
@@ -22,7 +22,7 @@ export default function AdminPanel() {
 
   return (
     <section className="panel">
-      <h1>Yönetici Paneli</h1>
+      <h2>Yönetici Paneli</h2>
       <p>Komutan, Analist ve Sağlık panolarının özet görünümü.</p>
       <div className="grid-3-balanced">
         {/* Komutan Paneli */}

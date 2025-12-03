@@ -1,23 +1,18 @@
+import Link from "next/link";
+import AdminPanel from "@/components/AdminPanel";
+import StatCard from "@/components/StatCard";
+
 export default function HomePage() {
   return (
     <section>
-      <h1>MSA Gösterge Paneli</h1>
-      <p>Qt arayüzünün statik Next.js versiyonu.</p>
-      {(() => {
-        const AdminPanel = require("../components/AdminPanel").default;
-        return <AdminPanel />;
-      })()}
+      <h1>Alethiea Veri Takip Paneli</h1>
+      <AdminPanel />
       <div className="grid" style={{ marginBottom: 12 }}>
-        {(() => {
-          const StatCard = require("../components/StatCard").default;
-          return (
-            <>
-              <StatCard title="Birimler" value={12} trendLabel="+2 bugün" />
-              <StatCard title="Uyarılar" value={2} trendLabel="-1 bugün" />
-              <StatCard title="Sağlık Uyarıları" value={1} trendLabel="0 bugün" />
-            </>
-          );
-        })()}
+        <>
+          <StatCard title="Birimler" value={12} trendLabel="+2 bugün" />
+          <StatCard title="Uyarılar" value={2} trendLabel="-1 bugün" />
+          <StatCard title="Sağlık Uyarıları" value={1} trendLabel="0 bugün" />
+        </>
       </div>
       <ul className="grid">
         <li className="card">
@@ -28,7 +23,7 @@ export default function HomePage() {
             <span className="chip">Uyarılar: 2</span>
             <span className="chip">Durum: Operasyonel</span>
           </div>
-          <a className="btn btn-primary" href="/commander">Aç</a>
+          <Link className="btn btn-primary" href="/commander">Aç</Link>
         </li>
 
         <li className="card">
@@ -39,7 +34,7 @@ export default function HomePage() {
             <span className="chip">Trendler: 3</span>
             <span className="chip">Model: Hazır</span>
           </div>
-          <a className="btn btn-primary" href="/analyst">Aç</a>
+          <Link className="btn btn-primary" href="/analyst">Aç</Link>
         </li>
 
         <li className="card">
@@ -50,7 +45,7 @@ export default function HomePage() {
             <span className="chip">Durum: İzleniyor</span>
           </div>
           <p className="muted">Son kontrol: 10 dk önce</p>
-          <a className="btn btn-primary" href="/health">Aç</a>
+          <Link className="btn btn-primary" href="/health">Aç</Link>
         </li>
 
         
