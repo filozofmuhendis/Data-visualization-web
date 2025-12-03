@@ -205,8 +205,9 @@ export default function TacticalMap({ units, height = 300, showGrid = true, show
 
   const formatUTM = (p: Point) => {
     const { lat, lon } = toLatLon(p);
-    const res = utm.convertLatLngToUtm(lat, lon); 
-    return `${res.ZoneNumber}${res.ZoneLetter} E:${Math.round(res.Easting)} N:${Math.round(res.Northing)}`;
+    const out = utm.ConvertLatLngToUtm(lat, lon, 1);
+    if (typeof out === "string") return out;
+    return `${out.ZoneNumber}${out.ZoneLetter} E:${Math.round(out.Easting)} N:${Math.round(out.Northing)}`;
   };
 
   const formatMGRS = (p: Point) => {
